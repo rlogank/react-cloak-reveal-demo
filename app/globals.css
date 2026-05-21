@@ -1,0 +1,150 @@
+:root {
+  color-scheme: light;
+  --background: #f7f3ea;
+  --foreground: #171717;
+  --muted: #5f625d;
+  --line: #d9d1c0;
+  --accent: #0f766e;
+  --accent-strong: #0b4f4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 56px clamp(20px, 5vw, 72px);
+}
+
+.hero {
+  min-height: 68vh;
+  display: grid;
+  align-content: center;
+  gap: 28px;
+  max-width: 1040px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(48px, 9vw, 112px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hero-copy {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.hero-copy p {
+  margin: 0;
+}
+
+.button {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 6px;
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cr-root {
+  position: relative;
+}
+
+.cr-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.cr-line {
+  display: inline-block;
+}
+
+.cr-measure {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.cr-block-mask {
+  overflow: hidden;
+}
+
+.examples {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.example-card {
+  min-height: 280px;
+  padding: 24px;
+  background: var(--background);
+  display: grid;
+  align-content: space-between;
+  gap: 24px;
+}
+
+.example-index {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.example-title {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    padding: 36px 18px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .examples {
+    grid-template-columns: 1fr;
+  }
+}

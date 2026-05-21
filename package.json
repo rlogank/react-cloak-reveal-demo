@@ -1,0 +1,35 @@
+{
+  "name": "react-cloak-reveal-demo",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Next.js demo for a line-aware React reveal animation component.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "animation",
+    "intersection-observer",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
+}
